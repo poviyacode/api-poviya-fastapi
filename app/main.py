@@ -4,7 +4,7 @@ from app.modules.instagram.router import router as instagram_router
 from app.modules.youtube.router import router as youtube_router  # <-- NUEVO
 from app.modules.tiktok.router import router as tiktok_router
 
-app = FastAPI(title="Universal Downloader API", version="1.0")
+app = FastAPI(title="Universal Downloader API fastapi.poviya.com", version="1.0")
 
 app.add_middleware(
     CORSMiddleware,
@@ -20,7 +20,6 @@ app.add_middleware(
 app.include_router(instagram_router)
 app.include_router(youtube_router)  # <-- NUEVO
 app.include_router(tiktok_router)
-
 
 @app.get("/")
 async def root():
